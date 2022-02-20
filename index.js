@@ -58,7 +58,6 @@ function sendEmail(){
     + "<br> city or District :"   + document.getElementById(  "city").value
     + "<br> State :"   + document.getElementById("state").value
     + "<br> Pincode :"  + document.getElementById("zip").value
-    + "<br> Subject :"  + document.getElementById("subject").value
 
 }).then(
   message => alert(message)
