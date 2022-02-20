@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <div id="brand"><a href="#">LOEZ Research Lab</a></div>
+        <nav>
+          <ul class="navul">
+            <li class="navli"><a href="#"><i class="fa fa-fw fa-home"></i> Home</a></li>
+            <li class="navli"><a href="#product"><i class="fa fa-fw fa-cart-arrow-down"></i> Products</a></li>
+            <li class="navli"><a href="#about"><i class="fa fa-fw fa-info-circle"></i> About</a></li>
+            <li class="navli"><a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a></li>
+            <li class="navli" id="login"><a href="#order"><i class="fa fa-fw fa-shopping-cart"></i> Cart </a></li>
+            
+          </ul>
+        </nav>
+        <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+          
+          <ul id="navul" class="mobile-menu">
+            <li id="navli"><a href="#"> Home</a></li>
+            <li id="navli"><a href="#product"> Product</a></li>
+            <li id="navli"><a href="#about"> About</a></li>
+            <li id="navli"><a href="#contact"> Contact</a></li>
+            <li id="navli"   id="login"><a href="#order">Cart </a></li>
+          </ul>
+        </div>
+      </header>
+
+
+      <section class="home" id="home">
+        <div class="hheader">
+            <div class="hshow">
+              <img class="dpimg" src="img/loez dp.jpg" alt="" srcset="">
+              <div class="ttl">
+            <h1>Painoba</h1>
+            <p>Life Begins When <b>Pain</b> Ends</p>
+          </div>
+           
+          </div>
+          </div>
+         
+      </section>
+
+      <section class="product" id="product">
+        <div class="card">
+            <img src="img/product p.png" alt="Painoba" style="width:100%">
+            <h1 class="productn">Painoba Pain Relieving Liquid 100ML
+            </h1>
+            <p class="price" data-price="610">&#8377 610</p>
+            <p><button onclick="location.href='#order'"  >Order Now</button></p>
+          </div>
+        </section> 
+
+        <section id="about">
+          <div class="about">
+            <p class="Hhilight">Highlights
+            And Useful Indications</p>
+            <div class="pinfo">
+                <ul class="aboutul">
+                    <li class="aboutli">General Musculoskeletal pain</li>
+                    <li class="aboutli">Osteoarthritis</li>
+                    <li class="aboutli">Rheumatoid arthritis</li>
+                    <li class="aboutli">Spondylitis</li>
+                </ul>
+            <img class="pimg" src='img/product p.png' alt="painoba"  />
+                <ul class="aboutul">
+                    <li class="aboutli">Herbal Medicine scientifically prepared</li>
+                    <li class="aboutli">Stable and Fast Action</li>
+                    <li class="aboutli">Absorption within seconds</li>
+                    <li class="aboutli">Safe in pregnancy</li>
+                    <li class="aboutli">Non-Sticky</li>
+                </ul>
+            </div>
+            </div>
+        </section>
+
+        <section class="order" id="order">
+          <div class="row">
+            <div class="col-75">
+              <div class="container">
+                <form onsubmit="sendEmail(); reset(); return false">
+                
+                  <div class="row">
+                    <div class="col-50">
+                      <h3>Billing Address</h3>
+                      <label for="fname">Accepted UPI Only</label>
+                      <div class="icon-container">
+                        <img class="svg" src="icon/upi.svg" alt="" srcset="">
+                       <img class="svg" src="icon/google-pay.svg" alt="" srcset="">
+                       <img class="svg" src="icon/paytm.svg" alt="" srcset="">
+                       <img class="svg" src="icon/phonepe-logo.svg" alt="" srcset="">
+                       <img class="svg" src="icon/amazon-pay.svg" alt="" srcset="">
+                      </div>
+                      <!-- Change the `data-field` of buttons and `name` of input field's for multiple plus minus buttons-->
+                      <div class="checkout">
+                        <p class="description">Quantity:</p>
+                      <p class="price" value="610" id="QTY"  onKeyUp="multiply()"></p>
+                      <input type="text" class="quantity" id="quantity" value="1" onKeyUp="multiply()">
+                      
+                        <p class="total">Total: &#8377</p><input type="text" name="TOTAL" id="TOTAL" value="680" readonly/>
+                        <div class="infoid"><p id="alws">Shipping Charge for one Pack &#8377 80 </p>
+                        <span id="freed">Order 2 or More for Free Delivery </span></div>
+                      </div>
+  
+                     
+  
+  
+                      <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                      <input type="text" id="fname" name="firstname" placeholder="Enter Your Full Name" required>
+                      <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                      <input type="text" id="email" name="email" placeholder="john@example.com" required>
+                      <label for="number"><i class="fa fa-phone"></i> Phone Number</label>
+                      <input type="tel" id="number" name="phone" pattern="+91" placeholder="Enter phone Number" required>
+                      <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                      <input type="text" id="adr" name="address" placeholder="Enter Your Full Address" required>
+                      <label for="city"><i class="fa fa-institution"></i> City and District</label>
+                      <input type="text" id="city" name="city" placeholder="Enter Your City With District" required>
+          
+                      <div class="row">
+                        <div class="col-50">
+                          <label for="state">State</label>
+                          <input type="text" id="state" name="state" placeholder="Enter Your State" required>
+                        </div>
+                        <div class="col-50">
+                          <label for="zip">Pin Code</label>
+                          <input type="text" id="zip" name="zip" placeholder="10001" required>
+                        </div>
+                      </div>
+                    </div>
+          
+                    
+                  </div>
+                  <label>
+                    <input type="checkbox" checked="checked" name="sameadr"> We may use this Number for call and Whatsapp to Contact you
+                  </label>
+                  <input type="submit" value="Place Order" class="btn" onclick="sendEmail , window.location='payment.html'">
+                  
+                  
+                </form>
+              </div>
+            </div>
+          </div>
+          
+        </section>
+
+        <section class="contact" id="contact">
+          <div class="footer">
+            <img class="dpimg" src="img/loez dp.jpg" alt="" srcset="">
+            <div class="contactus">
+              <p class="contHEAD">Contact Us</p>
+              <div class="wlink">
+            <a href="https://wa.link/az453j" class="lik"><i class="fa fa-whatsapp"></i></a>
+            <a href="https://t.me/painoba" class="linkss"><i class="fa fa-telegram"></i></a>
+          </div>
+          </div>
+            <div class="containerfooter">
+              <form >
+                <label for="fname">Name</label>
+                <input type="text" class="ftext"   id="ffname" name="firstname" placeholder="Your name..">
+            
+                <label for="email">Email</label>
+                <input type="text" class="ftext" id="femail" name="email" placeholder="john@example.com">
+                <label for="subject">Subject</label>
+                <textarea id="subject" class="ftext" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+            
+                <input type="submit" class="fbtn" value="Submit" onclick="sendEmail">
+              </form>
+            </div>
+            
+            </div>
+          </section>
+
+
+          
+      
+          <script src="https://smtpjs.com/v3/smtp.js"></script>
+      <script src="index.js"></script>
+      
+      </script>
+</body>
+</html>
